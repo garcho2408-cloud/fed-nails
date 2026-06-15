@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Запись онлайн — fed.nails.fed</title>
+  <meta name="description" content="Запись на маникюр онлайн. Студия Дарьи Федотовой, Раменское.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header" id="header">
+  <div class="container">
+    <div class="header__inner">
+      <a href="index.html" class="logo-img"><img src="images/logo.svg" alt="fed.nails.fed" height="60" width="60"></a>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="services.html" class="nav__link">Услуги</a>
+        <a href="portfolio.html" class="nav__link">Портфолио</a>
+        <a href="about.html" class="nav__link">О мастере</a>
+        <a href="contacts.html" class="nav__link">Контакты</a>
+      </nav>
+      <div class="header__actions">
+        <a href="tel:+79661725056" class="header__phone">+7 (966) 172-50-56</a>
+        <a href="https://yandex.ru/maps/org/studiya_manikyura_fedotovoy_daryi/131575176640/?booking%5Bpage%5D=menu&booking%5Bpermalink%5D=131575176640&ll=38.212778%2C55.580783&z=17" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Записаться</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <nav class="mobile-menu__nav">
+    <a href="index.html" class="mobile-menu__link">Главная</a>
+    <a href="services.html" class="mobile-menu__link">Услуги</a>
+    <a href="portfolio.html" class="mobile-menu__link">Портфолио</a>
+    <a href="about.html" class="mobile-menu__link">О мастере</a>
+    <a href="contacts.html" class="mobile-menu__link">Контакты</a>
+  </nav>
+  <div class="mobile-menu__actions">
+    <a href="tel:+79661725056" class="mobile-menu__contact">+7 (966) 172-50-56</a>
+    <a href="https://yandex.ru/maps/org/studiya_manikyura_fedotovoy_daryi/131575176640/?booking%5Bpage%5D=menu&booking%5Bpermalink%5D=131575176640&ll=38.212778%2C55.580783&z=17" target="_blank" rel="noopener" class="btn btn--primary">Записаться онлайн</a>
+  </div>
+</div>
+
+<!-- Page Header -->
+<div class="page-header page-header--alt">
+  <div class="container">
+    <span class="label">Онлайн-запись</span>
+    <h1 class="title" style="margin-top:.75rem;">Записаться на приём</h1>
+    <p class="body-sm" style="margin-top:.625rem;max-width:480px;">Выберите услугу, дату и время — мы свяжемся для подтверждения.</p>
+  </div>
+</div>
+
+<!-- Booking Form -->
+<section>
+  <div class="container">
+    <div class="booking-wrap">
+
+      <!-- Progress bar -->
+      <div class="booking-progress" id="bookingProgress">
+        <div class="progress-step active" data-step="1">
+          <div class="progress-step__dot">1</div>
+          <span class="progress-step__label">Услуга</span>
+        </div>
+        <div class="progress-line" id="line-1-2"></div>
+        <div class="progress-step" data-step="2">
+          <div class="progress-step__dot">2</div>
+          <span class="progress-step__label">Дата и время</span>
+        </div>
+        <div class="progress-line" id="line-2-3"></div>
+        <div class="progress-step" data-step="3">
+          <div class="progress-step__dot">3</div>
+          <span class="progress-step__label">Данные</span>
+        </div>
+        <div class="progress-line" id="line-3-4"></div>
+        <div class="progress-step" data-step="4">
+          <div class="progress-step__dot">4</div>
+          <span class="progress-step__label">Готово</span>
+        </div>
+      </div>
+
+      <!-- Step 1: Service -->
+      <div class="booking-step active" id="step1">
+        <h2 class="step-title">Выберите услугу</h2>
+        <p class="step-sub">Выберите процедуру, на которую хотите записаться</p>
+
+        <button class="service-option" data-id="manicure-gel" data-name="Маникюр + гель-лак" data-price="2 000 ₽" data-duration="90">
+          <div class="service-option__name">Маникюр + покрытие гель-лаком</div>
+          <div class="service-option__meta">
+            
+            <span class="service-option__duration">90 мин</span>
+          </div>
+          <div class="service-option__desc">Маникюр + стойкое покрытие до 3 недель</div>
+        </button>
+
+        <button class="service-option" data-id="manicure-classic" data-name="Классический маникюр" data-price="800 ₽" data-duration="60">
+          <div class="service-option__name">Классический маникюр</div>
+          <div class="service-option__meta">
+            
+            <span class="service-option__duration">60 мин</span>
+          </div>
+          <div class="service-option__desc">Обработка кутикулы, формирование формы, покрытие базой</div>
+        </button>
+
+        <button class="service-option" data-id="manicure-hw" data-name="Аппаратный маникюр" data-price="1 000 ₽" data-duration="75">
+          <div class="service-option__name">Аппаратный маникюр</div>
+          <div class="service-option__meta">
+            
+            <span class="service-option__duration">75 мин</span>
+          </div>
+          <div class="service-option__desc">Безрезовая техника, максимально безопасно</div>
+        </button>
+
+        <button class="service-option" data-id="build-gel" data-name="Наращивание гелем" data-price="3 000 ₽" data-duration="150">
+          <div class="service-option__name">Наращивание гелем</div>
+          <div class="service-option__meta">
+            
+            <span class="service-option__duration">150 мин</span>
+          </div>
+          <div class="service-option__desc">Любая форма: квадрат, миндаль, стилет, балерина</div>
+        </button>
+
+        <button class="service-option" data-id="build-acrylic" data-name="Наращивание акрилом" data-price="2 800 ₽" data-duration="140">
+          <div class="service-option__name">Наращивание акрилом</div>
+          <div class="service-option__meta">
+            
+            <span class="service-option__duration">140 мин</span>
+          </div>
+          <div class="service-option__desc">Высокая прочность, подходит для коротких ногтей</div>
+        </button>
+
+        <button class="service-option" data-id="pedi-gel" data-name="Педикюр + гель-лак" data-price="2 200 ₽" data-duration="100">
+          <div class="service-option__name">Педикюр + гель-лак</div>
+          <div class="service-option__meta">
+            
+            <span class="service-option__duration">100 мин</span>
+          </div>
+          <div class="service-option__desc">Полный педикюр с покрытием до 4 недель</div>
+        </button>
+
+        <button class="service-option" data-id="pedi-classic" data-name="Классический педикюр" data-price="1 200 ₽" data-duration="70">
+          <div class="service-option__name">Классический педикюр</div>
+          <div class="service-option__meta">
+            
+            <span class="service-option__duration">70 мин</span>
+          </div>
+          <div class="service-option__desc">Обработка кутикулы стоп, уход за пяточками</div>
+        </button>
+
+        <button class="service-option" data-id="correction" data-name="Коррекция наращивания" data-price="2 000 ₽" data-duration="90">
+          <div class="service-option__name">Коррекция наращивания</div>
+          <div class="service-option__meta">
+            
+            <span class="service-option__duration">90 мин</span>
+          </div>
+          <div class="service-option__desc">Коррекция отросшей зоны, восстановление формы</div>
+        </button>
+
+        <button class="btn btn--continue" id="step1Next" disabled>Далее — выбрать дату</button>
+      </div>
+
+      <!-- Step 2: Date & Time -->
+      <div class="booking-step" id="step2">
+        <button class="back-btn" id="step2Back">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          Назад
+        </button>
+        <div class="booking-summary" id="summaryStep2"></div>
+
+        <h2 class="step-title">Выберите дату</h2>
+        <p class="step-sub">Мастер работает ежедневно с 10:00 до 20:00</p>
+
+        <!-- Calendar -->
+        <div class="calendar">
+          <div class="calendar__header">
+            <button class="calendar__nav" id="calPrev">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <span class="calendar__month" id="calMonth"></span>
+            <button class="calendar__nav" id="calNext">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+          <div class="calendar__weekdays">
+            <div class="calendar__weekday">Пн</div>
+            <div class="calendar__weekday">Вт</div>
+            <div class="calendar__weekday">Ср</div>
+            <div class="calendar__weekday">Чт</div>
+            <div class="calendar__weekday">Пт</div>
+            <div class="calendar__weekday">Сб</div>
+            <div class="calendar__weekday">Вс</div>
+          </div>
+          <div class="calendar__days" id="calDays"></div>
+        </div>
+
+        <!-- Time -->
+        <div class="time-section" id="timeSection" style="display:none;">
+          <h3 style="font-family:var(--font-sans);font-size:.875rem;font-weight:500;color:var(--brown-900);margin-bottom:.875rem;">Выберите время</h3>
+          <div class="time-grid" id="timeGrid"></div>
+        </div>
+
+        <button class="btn btn--continue" id="step2Next" disabled>Далее — контактные данные</button>
+      </div>
+
+      <!-- Step 3: Contact data -->
+      <div class="booking-step" id="step3">
+        <button class="back-btn" id="step3Back">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          Назад
+        </button>
+        <div class="booking-summary" id="summaryStep3"></div>
+
+        <h2 class="step-title">Ваши данные</h2>
+        <p class="step-sub">Для подтверждения записи</p>
+
+        <div class="form-group">
+          <label class="form-label" for="clientName">Имя</label>
+          <input class="form-input" type="text" id="clientName" name="name" placeholder="Ваше имя" autocomplete="given-name">
+          <span class="form-error" id="nameError" style="display:none;">Пожалуйста, введите имя</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="clientPhone">Номер телефона</label>
+          <input class="form-input" type="tel" id="clientPhone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel">
+          <span class="form-error" id="phoneError" style="display:none;">Введите корректный номер</span>
+        </div>
+
+        <button class="btn btn--continue" id="step3Next">Подтвердить запись</button>
+      </div>
+
+      <!-- Step 4: Confirmation -->
+      <div class="booking-step" id="step4">
+        <div class="confirmation">
+          <div class="confirmation__icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <h2 class="step-title" style="text-align:center;">Запись отправлена!</h2>
+            <p class="step-sub" style="text-align:center;">Нажмите кнопку ниже — откроется WhatsApp с готовым сообщением для Дарьи.</p>
+          </div>
+
+          <div class="booking-detail" id="finalSummary" style="width:100%;">
+            <!-- filled by JS -->
+          </div>
+
+          <a href="#" class="btn btn--primary" id="telegramLink" style="width:100%;padding:1rem;font-size:.9375rem;background:#2AABEE;" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m22 2-7 20-4-9-9-4 20-7z"/><path d="M22 2 11 13"/></svg>
+            Открыть Telegram
+          </a>
+
+          <div class="confirmation__socials">
+            <a href="https://wa.me/79661725056" target="_blank" rel="noopener" class="confirmation__social-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              WhatsApp
+            </a>
+            <a href="tel:+79661725056" class="confirmation__social-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1 19.79 19.79 0 0 1 1.62 4.5 2 2 0 0 1 3.59 2.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.13 6.13l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Позвонить
+            </a>
+          </div>
+
+          <p style="font-size:.75rem;color:var(--muted);text-align:center;line-height:1.6;">
+            Дарья подтвердит запись в течение нескольких часов.<br>
+            Студия работает ежедневно 10:00–20:00.
+          </p>
+          <a href="index.html" class="btn btn--outline" style="width:100%;">На главную</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a href="index.html" class="footer__logo">fed<span>.</span>nails.fed</a>
+        <p class="footer__desc">Студия маникюра Дарьи Федотовой.</p>
+        <div class="footer__socials">
+          <a href="https://www.instagram.com/fed.nails.fed" target="_blank" rel="noopener" class="footer__social" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://wa.me/79661725056" target="_blank" rel="noopener" class="footer__social" aria-label="WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+          <a href="https://t.me/+79661725056" target="_blank" rel="noopener" class="footer__social" aria-label="Telegram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m22 2-7 20-4-9-9-4 20-7z"/><path d="M22 2 11 13"/></svg>
+          </a>
+          <a href="https://yandex.ru/maps/org/studiya_manikyura_fedotovoy_daryi/131575176640" target="_blank" rel="noopener" class="footer__social" aria-label="Яндекс Карты">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <p class="footer__col-title">Навигация</p>
+        <nav class="footer__nav">
+          <a href="index.html">Главная</a>
+          <a href="services.html">Услуги</a>
+          <a href="portfolio.html">Портфолио</a>
+          <a href="about.html">О мастере</a>
+          <a href="contacts.html">Контакты</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer__col-title">Контакты</p>
+        <div class="footer__contacts">
+          <a href="tel:+79661725056" class="footer__contact-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1 19.79 19.79 0 0 1 1.62 4.5 2 2 0 0 1 3.59 2.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.13 6.13l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +7 (966) 172-50-56
+          </a>
+          <div class="footer__contact-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Северное шоссе 16А, Раменское</span>
+          </div>
+          <div class="footer__contact-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Пн–Вс, 10:00–20:00
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 Студия Маникюра Дарьи Федотовой. fed.nails.fed</p>
+      <a href="https://yandex.ru/maps/org/studiya_manikyura_fedotovoy_daryi/131575176640/?booking%5Bpage%5D=menu&booking%5Bpermalink%5D=131575176640&ll=38.212778%2C55.580783&z=17" target="_blank" rel="noopener" class="footer__book-link">Запись онлайн →</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp FAB -->
+<a href="https://wa.me/79661725056" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Написать в WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="js/main.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>
