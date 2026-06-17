@@ -451,7 +451,7 @@
   const grid = document.getElementById('homePortfolioGrid');
   grid.innerHTML = portfolioData.map(item => `
     <div class="portfolio-item reveal">
-      <img src="${item.src}" alt="${item.label}" loading="lazy" decoding="async" onload="this.classList.add('loaded')">
+      <img src="${item.src}" alt="${item.label}" loading="lazy" decoding="async">
     </div>`).join('');
 </script>
 <script src="js/lightbox.js"></script>

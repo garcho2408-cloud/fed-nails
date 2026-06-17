@@ -517,14 +517,6 @@ section { padding: var(--section-py) 0; }
   width: 100%;
   height: auto;
   display: block;
-  background: linear-gradient(90deg, #f0ebe4 25%, #e8e0d6 50%, #f0ebe4 75%);
-  background-size: 200% 100%;
-  animation: skeleton 1.4s ease infinite;
-}
-.portfolio-item img.loaded { animation: none; background: none; }
-@keyframes skeleton {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
 }
 .portfolio-item:hover img { transform: scale(1.05); }
 .portfolio-item__overlay {
