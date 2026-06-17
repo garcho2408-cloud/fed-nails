@@ -449,12 +449,10 @@
     { src: 'images/portfolio/6.jpg',  label: 'Наращивание · Миндаль' },
   ];
   const grid = document.getElementById('homePortfolioGrid');
-  portfolioData.forEach(item => {
-    grid.innerHTML += `
-      <div class="portfolio-item reveal">
-        <img src="${item.src}" alt="${item.label}" loading="lazy">
-      </div>`;
-  });
+  grid.innerHTML = portfolioData.map(item => `
+    <div class="portfolio-item reveal">
+      <img src="${item.src}" alt="${item.label}" loading="lazy" decoding="async" onload="this.classList.add('loaded')">
+    </div>`).join('');
 </script>
 <script src="js/lightbox.js"></script>
 </body>
