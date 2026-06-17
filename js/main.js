@@ -63,57 +63,6 @@ const mutationObs = new MutationObserver(mutations => {
 });
 mutationObs.observe(document.body, { childList: true, subtree: true });
 
-// === Photo scroll-expand effect ===
-const photoSelectors = [
-  '.portfolio-item img',
-  '.interior-item img',
-  '.about-photo img',
-  '.hero__bg img'
-].join(',');
-
-const photos = document.querySelectorAll(photoSelectors);
-
-photos.forEach(img => {
-  img.style.transition = 'transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.9s ease';
-  img.style.transform = 'scale(0.82)';
-  img.style.opacity = '0';
-});
-
-const photoObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.transform = 'scale(1)';
-      entry.target.style.opacity = '1';
-    } else {
-      entry.target.style.transform = 'scale(0.82)';
-      entry.target.style.opacity = '0';
-    }
-  });
-}, {
-  threshold: 0.2,
-  rootMargin: '0px 0px -60px 0px'
-});
-
-photos.forEach(img => {
-  photoObserver.observe(img);
-});
-
-// Re-observe dynamically added photos (portfolio filter)
-const photoMutationObs = new MutationObserver(mutations => {
-  mutations.forEach(m => {
-    m.addedNodes.forEach(node => {
-      if (node.nodeType !== 1) return;
-      const imgs = node.querySelectorAll ? node.querySelectorAll('img') : [];
-      imgs.forEach(img => {
-        img.style.transition = 'transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.9s ease';
-        img.style.transform = 'scale(0.82)';
-        img.style.opacity = '0';
-        photoObserver.observe(img);
-      });
-    });
-  });
-});
-photoMutationObs.observe(document.body, { childList: true, subtree: true });
 
 // === Active nav link ===
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
