@@ -95,11 +95,7 @@ const photoObserver = new IntersectionObserver(entries => {
 });
 
 photos.forEach(img => {
-  if (img.complete) {
-    photoObserver.observe(img);
-  } else {
-    img.addEventListener('load', () => photoObserver.observe(img));
-  }
+  photoObserver.observe(img);
 });
 
 // Re-observe dynamically added photos (portfolio filter)
