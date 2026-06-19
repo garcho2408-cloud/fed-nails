@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600&family=Inter:wght@400;500&display=swap">
   <link rel="stylesheet" href="css/styles.css?v=3">
-  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
 </head>
 <body>
 
@@ -181,7 +181,7 @@
   <div class="container">
     <div class="about-split">
       <div class="about-photo reveal">
-        <img src="images/master.jpg" alt="Дарья Федотова">
+        <img src="images/master.jpg" alt="Дарья Федотова" loading="lazy">
       </div>
       <div class="about-content reveal reveal-delay-1">
         <span class="label">О мастере</span>
@@ -210,31 +210,31 @@
     </div>
     <div class="interior-grid">
       <div class="interior-item reveal">
-        <img src="images/interior/1.jpg" alt="Интерьер студии">
+        <img src="images/interior/1.jpg" alt="Интерьер студии" loading="lazy">
       </div>
       <div class="interior-item reveal reveal-delay-1">
-        <img src="images/interior/2.jpg" alt="Рабочее место">
+        <img src="images/interior/2.jpg" alt="Рабочее место" loading="lazy">
       </div>
       <div class="interior-item reveal reveal-delay-2">
-        <img src="images/interior/3.jpg" alt="Студия маникюра">
+        <img src="images/interior/3.jpg" alt="Студия маникюра" loading="lazy">
       </div>
       <div class="interior-item reveal">
-        <img src="images/interior/4.jpg" alt="Зона ожидания">
+        <img src="images/interior/4.jpg" alt="Зона ожидания" loading="lazy">
       </div>
       <div class="interior-item reveal reveal-delay-1">
-        <img src="images/interior/5.jpg" alt="Детали интерьера">
+        <img src="images/interior/5.jpg" alt="Детали интерьера" loading="lazy">
       </div>
       <div class="interior-item reveal reveal-delay-2">
-        <img src="images/interior/6.jpg" alt="Атмосфера студии">
+        <img src="images/interior/6.jpg" alt="Атмосфера студии" loading="lazy">
       </div>
       <div class="interior-item reveal">
-        <img src="images/interior/7.jpg" alt="Студия маникюра">
+        <img src="images/interior/7.jpg" alt="Студия маникюра" loading="lazy">
       </div>
       <div class="interior-item reveal reveal-delay-1">
-        <img src="images/interior/8.jpg" alt="Рабочее место мастера">
+        <img src="images/interior/8.jpg" alt="Рабочее место мастера" loading="lazy">
       </div>
       <div class="interior-item reveal">
-        <img src="images/interior/9.jpg" alt="Интерьер студии">
+        <img src="images/interior/9.jpg" alt="Интерьер студии" loading="lazy">
       </div>
     </div>
     <p style="text-align:center;font-size:.875rem;color:var(--muted);margin-top:1.25rem;" class="reveal">
@@ -450,7 +450,7 @@
   const grid = document.getElementById('homePortfolioGrid');
   grid.innerHTML = portfolioData.map(item => `
     <div class="portfolio-item reveal">
-      <img src="${item.src}" alt="${item.label}">
+      <img src="${item.src}" alt="${item.label}" loading="lazy">
     </div>`).join('');
 </script>
 <script src="js/lightbox.js"></script>
