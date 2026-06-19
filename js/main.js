@@ -76,15 +76,13 @@ const photoObserver = new IntersectionObserver(entries => {
     if (entry.isIntersecting) {
       entry.target.style.transform = 'scale(1)';
       entry.target.style.opacity = '1';
-    } else {
-      entry.target.style.transform = 'scale(0.88)';
-      entry.target.style.opacity = '0';
+      photoObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0 });
+}, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll(photoSelectors).forEach(img => {
-  img.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.8s ease';
+  img.style.transition = 'transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.7s ease';
   img.style.transform = 'scale(0.88)';
   img.style.opacity = '0';
   photoObserver.observe(img);

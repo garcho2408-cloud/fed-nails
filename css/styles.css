@@ -132,7 +132,6 @@ section { padding: var(--section-py) 0; }
 .btn--primary {
   background: var(--taupe-500);
   color: #fff;
-  animation: pulse-glow 2.5s ease-in-out infinite;
 }
 .btn--primary:hover { background: var(--taupe-600); }
 
@@ -517,6 +516,7 @@ section { padding: var(--section-py) 0; }
   width: 100%;
   height: auto;
   display: block;
+  will-change: transform, opacity;
 }
 .portfolio-item:hover img { transform: scale(1.05); }
 .portfolio-item__overlay {
@@ -1382,14 +1382,13 @@ section { padding: var(--section-py) 0; }
   opacity: 0;
   transform: translateY(20px);
   transition: opacity .6s ease, transform .6s ease;
+  will-change: opacity, transform;
 }
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+  will-change: auto;
 }
-.reveal-delay-1 { transition-delay: .1s; }
-.reveal-delay-2 { transition-delay: .2s; }
-.reveal-delay-3 { transition-delay: .3s; }
 .reveal-delay-1 { transition-delay: .1s; }
 .reveal-delay-2 { transition-delay: .2s; }
 .reveal-delay-3 { transition-delay: .3s; }
