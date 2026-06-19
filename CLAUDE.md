@@ -3,9 +3,9 @@
 ## О проекте
 Сайт-визитка для студии маникюра. **Чистый HTML + CSS + JS** — никакого React, Next.js, сборщиков. Файлы открываются напрямую в браузере.
 
-Сайт задеплоен на Netlify: https://funny-heliotrope-ce4daa.netlify.app  
+Сайт задеплоен на Cloudflare Pages: https://fed-nails.pages.dev  
 GitHub: https://github.com/garcho2408-cloud/fed-nails  
-Домен (в процессе подключения): fednails.ru
+Домен: https://fednails.ru
 
 ---
 
@@ -32,7 +32,7 @@ fed-nails/
 │   ├── master.jpg      # Фото Дарьи
 │   ├── interior/       # Фото студии (1.jpg — 9.jpg)
 │   └── portfolio/      # Работы (1.jpg — 23.jpg)
-└── netlify.toml        # Конфиг деплоя (publish=".", command="")
+└── netlify.toml        # Конфиг кэш-заголовков (Cloudflare Pages его игнорирует, но оставлен)
 ```
 
 ---
